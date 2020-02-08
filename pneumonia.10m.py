@@ -1,9 +1,12 @@
 #!/Users/mablat/anaconda3/bin/python
+# you can set your own python interperter
 
 import requests as rq
 import json
 import os
 from datetime import datetime
+
+# you get set your own data url
 
 data_url  = '/Users/mablat/bitbar-cache'
 
@@ -28,7 +31,7 @@ def prettify(s):
     died = s['died']
     cured = s['cured']
     serious = s['serious']
-    return (str(suspected) + '/' + str(confirmed) + '/' + str(serious) + '/' + str(cured) + '/' + str(died) + ' | color = #d45')
+    return (str(suspected) + '/' + str(confirmed) + '/' + str(serious) + '/' + str(cured) + '/' + str(died) + ' | color = red')
 
 def is_diff(before, after):
     if before['confirmed'] != after['confirmed']:
